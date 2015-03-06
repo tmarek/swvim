@@ -22,7 +22,9 @@ set nocompatible
 " Setup the bundles
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Bundle: tpope/vim-pathogen
-call pathogen#infect('~/.vim/bundle/{}')
+" call pathogen#infect('~/.vim/bundle/')
+" call pathogen#infect('~/.vim/bundle/{}')
+call pathogen#infect('~/.vim/bundle//{}')
 
 " Set solarized-colors
 set t_Co=256
@@ -164,8 +166,17 @@ set splitright
 set splitbelow
 
 " Open files with <leader>f
-map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+" map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>f :CommandT<cr>
+map <leader>fl :CommandTFlush<cr>
 
+" hard coded stuff for sennheiser project to force command to to search
+" certain directories
+map <leader>fb :CommandT ./backend<CR>
+map <leader>ff :CommandT ./frontend<CR>
+map <leader>fc :CommandT ./common<CR>
+
+"
 " Open files, limited to the directory of the current file, with <leader>gf
 " This requires the %% mapping found below.
 map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
