@@ -2,6 +2,10 @@
 
 Swvim is a little vim package. It's lightweight and optimized for rails development in terminal vim.
 
+## Branches / Changes
+Current settings for torsten are in branch torsten_2015
+before installing check out torsten_2015
+
 ## Requirements
 You need a vim version with ruby interpreter enabled. (for Command-T)
 Also be sure that you have 256 colors enabled in your terminal.
